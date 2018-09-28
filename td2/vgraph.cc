@@ -29,15 +29,16 @@ const vector<pair<int,double>>& DirectedGraph::Neighbors(int node) const {
 void DirectedGraph::MakeSimple() {
     vector<bool> visited(NumNodes(), false);
     for (int i = 0; i < NumNodes(); ++i) {
-        vector<int>& adj = neighbors_[i];
+        vector<pair<int,double>>& adj = neighbors_[i];
         int kept = 0;
-        for (int& x : adj) {
-            if (x != i && !visited[x]) {
-                visited[x] = true;
+        for (pair<int,double>& x : adj) {
+            if (x.first != i && !visited[x.first]) {
+                visited[x.first] = true;
                 adj[kept++] = x;
             }
         }
         adj.resize(kept);
-        for (int x : adj) visited[x] = false;
+        for (pair<int,double> x : adj) visited[x.first] = false;
     }
 }
+

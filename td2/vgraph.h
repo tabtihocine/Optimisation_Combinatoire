@@ -4,7 +4,8 @@
 #include <vector>
 #include <utility>
 
-using std::vector;
+//using std::vector;
+using namespace std;
 
 // A directed graph is a set of nodes, linked by arcs. Arcs are directed: they
 // go from a node to another node.
@@ -49,7 +50,7 @@ public:
     void MakeSimple();
 
 private:
-    vector<pair<int,double>> neighbors_;
+    vector<vector<pair<int,double>>> neighbors_;
     int num_arcs_;
 };
 
