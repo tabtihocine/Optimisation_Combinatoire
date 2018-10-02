@@ -13,6 +13,11 @@ int main() {
     CHECK_EQ(StrJoin(GetBfsDistances({0, 0}), ", "), "0, 1");
     cout << "PASSED\n";
 
+  /*  cout << "Test: simple" << endl;
+    CHECK_EQ(StrJoin(GetBfsDistances({2, 3, 2, 2, 3, 0}), ", "), "1, 2, 0, 1, 2, 2");
+    cout << "PASSED\n";*/
+
+
     cout << "Test: simple 'star' graph" << endl;
     CHECK_EQ(StrJoin(GetBfsDistances({1, 1, 1, 1}), ", "), "1, 0, 1, 1");
     cout << "PASSED\n";
@@ -29,14 +34,13 @@ int main() {
     cout << "Test: graph with only one node" << endl;
     CHECK_EQ(StrJoin(GetBfsDistances({0}), ", "), "0");
     cout << "PASSED\n";
-  
+
     cout << "Test: empty graph (zero node)" << endl;
     CHECK_EQ(StrJoin(GetBfsDistances({}), ", "), "");
     cout << "PASSED\n";
-  
+
     cout << "Test: all disconnected but the source" << endl;
-    CHECK_EQ(StrJoin(GetBfsDistances({-1, -1, -1, 3, -1, -1}), ", "),
-             "-1, -1, -1, 0, -1, -1");
+    CHECK_EQ(StrJoin(GetBfsDistances({-1, -1, -1, 3, -1, -1}), ", "),"-1, -1, -1, 0, -1, -1");
     cout << "PASSED\n";
   }
   {
