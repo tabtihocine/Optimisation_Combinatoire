@@ -1,4 +1,4 @@
-#include "bfs.2.h"
+	#include "bfs.2.h"
 #include <vector>
 #include <iostream>
 using namespace std;
@@ -26,7 +26,6 @@ vector<int> GetBfsDistances(const vector<int>& parent){
       }
 
      else{
-
         posIni= i;
         while(parent[i]!=i && parent[i]>=0){
         i=parent[i];

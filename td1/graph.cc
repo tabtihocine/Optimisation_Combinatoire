@@ -46,7 +46,8 @@ void DirectedGraph::MakeSimple() {
     for (int i=0; i<this->adj.size(); i++) {
      adj[i].erase(unique(adj[i].begin(), adj[i].end()),adj[i].end());
         for (int t=0; t< this->adj[i].size();t++) {
-           if(i==this->adj[i][t])   this->adj[i].erase(this->adj[i].begin()+t);
+           if(i==this->adj[i][t])   
+		this->adj[i].erase(this->adj[i].begin()+t);
 
         }
     }

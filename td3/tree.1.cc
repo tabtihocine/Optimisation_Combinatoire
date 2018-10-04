@@ -12,9 +12,7 @@ vector<vector<int>> ParentVectorToChildrenVector(const vector<int>& parent){
          i=i;
         }else{
         childrens[parent[i]].push_back(i);
-
         }//end else
-
      }//end for
 
     return childrens;
