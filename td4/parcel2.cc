@@ -5,7 +5,10 @@ using namespace std;
 
 vector<int> OptimalParcels(const vector<int>& gain){
  vector<int> parcel; 
-if (gain.empty()) return {} ;
+if (gain.empty()){
+parcel.clear();
+return parcel;
+} 
 
 
 vector<int> maxGain(gain.size(), -1);
@@ -21,11 +24,9 @@ int k = maxGain.size()-1;
      if(maxGain[k]>maxGain[k-1] ){
          parcel.push_back(k);
          k-=2;
-     }else{
-         
+     }else{   
          k--;
      }
-    
  }
 reverse(parcel.begin(),parcel.end());
 
