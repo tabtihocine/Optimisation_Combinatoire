@@ -2,6 +2,7 @@
 #define __PRIM_H
 
 #include <vector>
+#include <queue>
 using namespace std;
 
 // Renvoie le poids de l'arbre couvrant minimal pour le graphe valué donné:

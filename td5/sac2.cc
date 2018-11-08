@@ -36,6 +36,7 @@ int somme=0;
 double value=0; 
 vector<int> picked; 
 vector<double> iValue; 
+
     while((somme<=C) && (i < obejct.size())){
    
      somme+=obejct[i].poid;
@@ -52,7 +53,7 @@ vector<double> iValue;
     double newValue= (Prendre*iValue.back())/picked.back();
     value-=iValue.back();
     value+=newValue; 
-      } 
+     } 
     
 
     return value;
