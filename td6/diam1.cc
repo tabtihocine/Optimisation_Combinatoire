@@ -12,11 +12,10 @@ pair<int,int> DiametreLB(const UndirectedGraph& graph){
      int nodeEloigner=0;
 
     while(clock()< Tmax){
-
+        
+            dis =  GetBfsDistances(BFS(graph,nodeSource)); 
             int distance=0;
             int nodeTemp=0;
-            dis =  GetBfsDistances(BFS(graph,nodeSource)); 
-        
                 for(int j=0 ; j<dis.size() ; j++){
                     if(dis[j]>distance){
                         distance=dis[j];
